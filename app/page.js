@@ -4,9 +4,8 @@ import Container from "@/components/container/Container";
 
 export default function Home() {
   return (
-    <main className="flex items-center md:items-stretch md:min-h-screen flex-col md:flex-row pt-12 justify-between px-7 md:px-[10%]">
-      <Dash/>
-      <Container/>
+    <main className="p-4">
+      <h1 className="text-xl border-b-2 w-fit font-bold">Sobre mi</h1>
     </main>
   );
 }

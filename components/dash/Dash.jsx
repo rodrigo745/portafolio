@@ -33,7 +33,7 @@ export default function Dash(){
             {/* Perfil */}
             <div className="flex flex-col items-center mt-8 pb-6">
                 <div className="bg-neutral-700 w-36 h-36 md:w-[10vw] md:h-[9.4vw] rounded-xl shadow-md"></div>
-                <h1 className="mt-5 text-lg text-center">Rodrigo Javier Quinteros</h1>
+                <h1 className="mt-5 text-lg font-bold text-center">Rodrigo Javier Quinteros</h1>
                 <p className="text-sm bg-neutral-700 p-1 px-4 rounded-lg mt-4 shadow-inner">Desarrollador Web</p>
             </div>
             <hr className="border-neutral-600"/>
@@ -42,10 +42,10 @@ export default function Dash(){
                 {
                     infoAdicional.map((e,i)=> (
                         <div key={i} className="mt-5 flex justify-between">
-                            <div className="w-[4vw] h-[4vw] rounded-lg shadow-md">
+                            <div className="w-[4vw] min-w-10 h-[4vw] rounded-lg shadow-md">
                                 {e.logo}
                             </div>
-                            <div className="flex flex-col pt-2 w-full pl-3">
+                            <div className="flex flex-col pt-3 w-full pl-3">
                                 <label className="text-neutral-400">{e.titulo}</label>
                                 <label className="text-sm">{e.info}</label>
                             </div>
