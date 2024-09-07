@@ -12,6 +12,7 @@ export default function Nav(){
     const [ d, setD ] = useState(false);
     const [ e, setE ] = useState(false);
     const variables = [a,b,c,d,e];
+    const [ menu, setMenu ] = useState(false);
 
     const addColor = (e)=>{
         e.target.id == 0 ? setA(true) : setA(false);
@@ -21,6 +22,10 @@ export default function Nav(){
         e.target.id == 4 ? setE(true) : setE(false);
     }
     
+    const activeMenu = (e)=>{
+
+    }
+
     return(
         <div>
             {/* Desktop */}
@@ -35,7 +40,11 @@ export default function Nav(){
             {/* Movil */}
             <div className="block lg:hidden absolute top-0 right-0 p-4">
                 <button className="rotate-90 font-bold text-xl">|||</button>
-                
+            </div>
+            <div className="">
+                <div className="">
+                    asd
+                </div>
             </div>
         </div>
     )
