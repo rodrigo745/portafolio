@@ -22,9 +22,7 @@ export default function Nav(){
         e.target.id == 4 ? setE(true) : setE(false);
     }
     
-    const activeMenu = (e)=>{
-
-    }
+    const activeMenu = (e)=>{ setMenu(!menu); }
 
     return(
         <div>
@@ -39,13 +37,19 @@ export default function Nav(){
             </div>
             {/* Movil */}
             <div className="block lg:hidden absolute top-0 right-0 p-4">
-                <button className="rotate-90 font-bold text-xl">|||</button>
+                <button onClick={activeMenu} className="rotate-90 font-bold text-xl">|||</button>
             </div>
-            <div className="">
-                <div className="">
-                    asd
+            {
+                menu &&
+                <div className="absolute top-16 bg-neutral-800 w-full p-4 flex flex-col space-y-2 pb-6">
+                    {
+                        enlaces.map((e, i)=> (
+                            <Link id={i} className={`hover:bg-neutral-900 p-2 rounded-md ${variables[i] ? "text-yellow-600" : ""}`} 
+                            key={i} href={e} onClick={addColor}>{nombres[i]}</Link>
+                        ))
+                    }
                 </div>
-            </div>
+            }
         </div>
     )
 }
